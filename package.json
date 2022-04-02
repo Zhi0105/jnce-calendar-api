@@ -15,7 +15,8 @@
     "express": "^4.17.3",
     "googleapis": "^100.0.0",
     "http-errors": "^2.0.0",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "node-localstorage": "^2.2.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
