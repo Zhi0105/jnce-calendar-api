@@ -1,3 +1,5 @@
+process.env.REACT_APP_TZ = 'Asia/Manila'
+
 const express = require('express');
 const router = express.Router();
 const { google } = require('googleapis');
