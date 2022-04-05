@@ -3,10 +3,15 @@ const createError = require('http-errors');
 const morgan = require('morgan');
 require('dotenv').config();
 
+const cors = require('cors');
+
 const app = express();
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
+
+app.use(cors())
 
 app.get('/', async (req, res, next) => {
   res.send({ message: 'Awesome it works 🐻' });
@@ -26,5 +31,5 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 @ http://localhost:${PORT}`));
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`🚀 Starting Server on Port ${PORT}`));
