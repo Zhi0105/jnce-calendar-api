@@ -1,4 +1,4 @@
-process.env.REACT_APP_TZ = 'Asia/Manila'
+process.env.REACT_APP_VERCEL_TZ = 'Asia/Manila'
 
 const express = require('express');
 const router = express.Router();
@@ -46,8 +46,13 @@ router.post('/create-event', async (req, res, next) => {
             },
             end: {
               dateTime: new Date(endDateTime)
+            },
+            reminders: {
+              useDefault: false,
+              overrides: [
+                {method: 'popup', 'minutes': 60}
+              ]
             }
-          
           }
         })
         res.send(response)

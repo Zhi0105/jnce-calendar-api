@@ -1,4 +1,4 @@
-process.env.REACT_APP_TZ = 'Asia/Manila'
+process.env.REACT_APP_VERCEL_TZ = 'Asia/Manila'
 
 const express = require('express');
 const createError = require('http-errors');
